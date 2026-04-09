@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Foodieland – Discover handpicked, spicy & delicious recipes every day." />
+  <title>Foodieland – Spicy Delicious Recipes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style/food.css" />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">
+      <i class="fa-solid fa-utensils logo-icon"></i>
+      <span class="logo-text">Foodieland<span class="logo-dot">.</span></span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#" class="nav-link">Recipes</a>
+      <a href="#" class="nav-link">Blog</a>
+      <a href="#" class="nav-link">Contact</a>
+      <a href="#" class="nav-link">About us</a>
+    </nav>
+
+    <div class="nav-socials">
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <div class="hot-badge">
+        <img src="assets/hot.png" alt="Hot" class="hot-icon" />
+        <span>Hot Recipes</span>
+      </div>
+
+      <h1 class="hero-title">Spicy delicious<br />chicken wings</h1>
+
+      <p class="hero-desc">
+        Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqut enim ad minim
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+        <span class="tag"><i class="fa-solid fa-utensils"></i> Chicken</span>
+      </div>
+
+      <div class="hero-footer">
+        <div class="author">
+          <img src="assets/jhon.png" alt="John Smith" class="author-avatar" />
+          <div class="author-info">
+            <span class="author-name">John Smith</span>
+            <span class="author-date">15 March 2022</span>
+          </div>
+        </div>
+        <a href="#" class="btn-view">
+          View Recipes <i class="fa-solid fa-circle-play"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-area">
+      <div class="spinning-badge">
+        <img src="assets/Badge.png" alt="Handpicked Recipes Badge" class="badge-img" />
+      </div>
+      <div class="food-img-wrapper">
+        <img src="assets/baked-chicken.png" alt="Spicy Baked Chicken Wings" class="food-img" />
+      </div>
+    </div>
+  </main>
+
+  <!-- category filter tabs -->
+  <section class="categories-section" id="categories">
+    <div class="category-tabs">
+      <button class="cat-tab active" id="cat-breakfast">
+        <img src="assets/breakfast.png" alt="Breakfast" class="cat-icon" />
+        <span>Breakfast</span>
+      </button>
+      <button class="cat-tab" id="cat-vegan">
+        <img src="assets/vegan.png" alt="Vegan" class="cat-icon" />
+        <span>Vegan</span>
+      </button>
+      <button class="cat-tab" id="cat-meat">
+        <img src="assets/meat.png" alt="Meat" class="cat-icon" />
+        <span>Meat</span>
+      </button>
+      <button class="cat-tab" id="cat-dessert">
+        <img src="assets/desert.png" alt="Dessert" class="cat-icon" />
+        <span>Dessert</span>
+      </button>
+      <button class="cat-tab" id="cat-lunch">
+        <img src="assets/launch.png" alt="Lunch" class="cat-icon" />
+        <span>Lunch</span>
+      </button>
+      <button class="cat-tab" id="cat-chocolate">
+        <img src="assets/choalate.png" alt="Chocolate" class="cat-icon" />
+        <span>Chocolate</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="recipes-section" id="recipes">
+    <h2 class="recipes-heading">Simple and tasty recipes</h2>
+    <p class="recipes-subtext">
+      Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqut enim ad minim
+    </p>
+
+    <div class="recipes-grid">
+      <div class="recipe-card" id="recipe-burger">
+        <div class="card-img-wrapper">
+          <img src="assets/burger.png" alt="Big and Juicy Wagyu Beef Cheeseburger" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Big and Juicy Wagyu Beef Cheeseburger</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Snack</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-fish">
+        <div class="card-img-wrapper">
+          <img src="assets/fish.png" alt="Fresh Lime Roasted Salmon with Ginger Sauce" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Fresh Lime Roasted Salmon with Ginger Sauce</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Fish</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-pancake">
+        <div class="card-img-wrapper">
+          <img src="assets/pancake.png" alt="Strawberry Oatmeal Pancake with Honey Syrup" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Strawberry Oatmeal Pancake with Honey Syrup</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Breakfast</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-salad">
+        <div class="card-img-wrapper">
+          <img src="assets/salad.png" alt="Fresh and Healthy Mixed Mayonnaise Salad" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Fresh and Healthy Mixed Mayonnaise Salad</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Healthy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-meatball">
+        <div class="card-img-wrapper">
+          <img src="assets/meatball.png" alt="Chicken Meatballs with Cream Cheese" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Chicken Meatballs with Cream Cheese</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Meat</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card recipe-ad" id="recipe-ad">
+        <div class="card-img-wrapper ad-wrapper">
+          <img src="assets/Ads.png" alt="Don't forget to eat healthy food" class="card-img" />
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-fruity">
+        <div class="card-img-wrapper">
+          <img src="assets/fruity-pan.png" alt="Fruity Pancake with Orange & Blueberry" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Fruity Pancake with Orange & Blueberry</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Sweet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-pot-chicken">
+        <div class="card-img-wrapper">
+          <img src="assets/pot-chik.png" alt="The Best Easy One Pot Chicken and Rice" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">The Best Easy One Pot Chicken and Rice</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Snack</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" id="recipe-creamy">
+        <div class="card-img-wrapper">
+          <img src="assets/creamy-chik.png" alt="The Creamiest Creamy Chicken and Bacon Pasta" class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">The Creamiest Creamy Chicken and Bacon Pasta</h3>
+          <div class="card-meta">
+            <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+            <span class="meta-item"><i class="fa-solid fa-utensils"></i> Noodles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chef-section">
+    <div class="chef-content">
+      <h2 class="chef-title">Everyone can be a<br />chef in their own kitchen</h2>
+      <p class="chef-desc">
+        Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+      </p>
+      <a href="#" class="btn-learn" id="learn-more-btn">Learn More</a>
+    </div>
+
+    <div class="chef-img-area">
+      <span class="float-food food-steak">🥩</span>
+      <span class="float-food food-onion">🧅</span>
+      <span class="float-food food-tomato">🍅</span>
+      <span class="float-food food-lettuce">🥬</span>
+      <img src="assets/chef.png" alt="Chef" class="chef-img" />
+    </div>
+  </section>
+
+  <section class="delicious-section" id="delicious">
+    <div class="delicious-container">
+      <div class="delicious-header">
+        <h2 class="delicious-title">Try this delicious recipe<br />to make your day</h2>
+        <p class="delicious-desc">
+          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqut enim ad minim
+        </p>
+      </div>
+
+      <div class="delicious-grid">
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/mixed-fruit.png" alt="Mixed Tropical Fruit Salad with Superfood Boosts" class="card-img" />
+            <button class="btn-fav active" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mixed Tropical Fruit Salad with Superfood Boosts</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Healthy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/wagyu-beef.png" alt="Big and Juicy Wagyu Beef Cheeseburger" class="card-img" />
+            <button class="btn-fav" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Big and Juicy Wagyu Beef Cheeseburger</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Western</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/japaness-food.png" alt="Healthy Japanese Fried Rice with Asparagus" class="card-img" />
+            <button class="btn-fav active" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Healthy Japanese Fried Rice with Asparagus</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Healthy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/taco-meat.png" alt="Cauliflower Walnut Vegetarian Taco Meat" class="card-img" />
+            <button class="btn-fav" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cauliflower Walnut Vegetarian Taco Meat</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Eastern</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/rainbow.png" alt="Rainbow Chicken Salad with Almond Honey Mustard Dressing"
+              class="card-img" />
+            <button class="btn-fav active" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Rainbow Chicken Salad with Almond Honey Mustard Dressing</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Healthy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/sandwitch.png" alt="Barbeque Spicy Sandwiches with Chips" class="card-img" />
+            <button class="btn-fav" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Barbeque Spicy Sandwiches with Chips</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Snack</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/wraps-food.png" alt="Firecracker Vegan Lettuce Wraps - Spicy!" class="card-img" />
+            <button class="btn-fav" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Firecracker Vegan Lettuce Wraps - Spicy!</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Seafood</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="card-img-wrapper">
+            <img src="assets/chiken-ramen.png" alt="Chicken Ramen Soup with Mushroom" class="card-img" />
+            <button class="btn-fav active" aria-label="Favorite"><i class="fa-solid fa-heart"></i></button>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Chicken Ramen Soup with Mushroom</h3>
+            <div class="card-meta">
+              <span class="meta-item"><i class="fa-regular fa-clock"></i> 30 Minutes</span>
+              <span class="meta-item"><i class="fa-solid fa-utensils"></i> Japanese</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inbox-section">
+    <div class="inbox-container">
+      <img src="assets/kisspng-salad.png" alt="Fresh ingredients" class="inbox-img-left" />
+      <img src="assets/del.png" alt="Delicious salad" class="inbox-img-right" />
+
+      <div class="inbox-content">
+        <h2 class="inbox-title">Deliciousness to your inbox</h2>
+        <p class="inbox-desc">
+          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor<br />
+          incididunt ut labore et dolore magna aliqut enim ad minim
+        </p>
+        <form class="inbox-form">
+          <input type="email" placeholder="Your email address..." required />
+          <button type="submit" class="btn-subscribe">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="footer-logo">Foodieland<span class="logo-dot">.</span></h2>
+          <p class="footer-desc">Lorem ipsum dolor sit amet, consectetuipisicing elit,</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Recipes</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <a href="#">About us</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2020 Flowbase. Powered by <span class="powered">Webflow</span></p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
