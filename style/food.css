@@ -23,6 +23,14 @@
   --font-body: 'Inter', sans-serif;
 }
 
+/* container - centers everything with max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
 html,
 body {
   width: 100%;
@@ -42,12 +50,16 @@ a {
 
 /* navbar */
 .navbar {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 60px;
-  position: relative;
-  z-index: 100;
+  padding: 22px 0;
 }
 
 .nav-logo {
@@ -127,13 +139,17 @@ a {
 
 /* hero */
 .hero {
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: calc(100vh - 80px);
-  padding: 40px 60px;
-  overflow: hidden;
-  background: #fff;
+  padding: 40px 0;
+  gap: 20px;
 }
 
 .hero-content {
@@ -319,7 +335,7 @@ a {
 
 /* category tabs */
 .categories-section {
-  padding: 40px 60px 10px;
+  padding: 40px 0 10px;
 }
 
 .category-tabs {
@@ -366,7 +382,7 @@ a {
 
 /* recipes grid */
 .recipes-section {
-  padding: 60px;
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -470,11 +486,14 @@ a {
 /* chef section */
 .chef-section {
   position: relative;
+  overflow: hidden;
+}
+
+.chef-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 60px;
-  overflow: hidden;
+  padding: 80px 0;
   min-height: 520px;
 }
 
@@ -539,8 +558,9 @@ a {
 
 .float-food {
   position: absolute;
-  font-size: 2.4rem;
-  line-height: 1;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
   animation: floatBob 3s ease-in-out infinite;
 }
@@ -583,7 +603,7 @@ a {
 
 /* delicious section */
 .delicious-section {
-  padding: 80px 60px;
+  padding: 80px 0;
 }
 
 .delicious-container {
@@ -656,7 +676,7 @@ a {
 
 /* inbox/newsletter */
 .inbox-section {
-  padding: 60px;
+  padding: 60px 0;
 }
 
 .inbox-container {
@@ -751,7 +771,7 @@ a {
 
 /* footer */
 .site-footer {
-  padding: 80px 60px 40px;
+  padding: 80px 0 40px;
   background: #fff;
 }
 
@@ -834,20 +854,93 @@ a {
   color: var(--orange);
 }
 
-/* responsive */
+/* ─── Hamburger Button ─────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background: var(--dark);
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* X animation when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ─── Tablet (≤ 900px) ─────────────────── */
 @media (max-width: 900px) {
-  .navbar {
-    padding: 18px 28px;
+
+  /* navbar */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-socials {
+    display: none;
   }
 
   .nav-links {
-    gap: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(280px, 80vw);
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 80px 32px 40px;
+    z-index: 150;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .hero {
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 14px 0;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  /* hero */
+  .hero-inner {
     flex-direction: column;
-    padding: 30px 28px 40px;
-    gap: 36px;
+    padding: 40px 0;
+    gap: 40px;
     text-align: center;
     align-items: center;
   }
@@ -881,10 +974,7 @@ a {
     left: 10px;
   }
 
-  .categories-section {
-    padding: 30px 28px 10px;
-  }
-
+  /* categories */
   .cat-tab {
     padding: 14px 20px;
   }
@@ -894,19 +984,31 @@ a {
     height: 40px;
   }
 
-  .recipes-section {
-    padding: 40px 28px 60px;
-  }
-
+  /* recipes */
   .recipes-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 
-  .delicious-section {
-    padding: 60px 28px;
+  /* chef */
+  .chef-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0;
+    gap: 30px;
   }
 
+  .chef-content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .chef-img-area {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  /* delicious */
   .delicious-header {
     flex-direction: column;
     text-align: center;
@@ -917,31 +1019,17 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .chef-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 60px 28px;
-    gap: 30px;
-  }
-
-  .chef-content {
-    align-items: center;
-    max-width: 100%;
-  }
-
-  .inbox-section {
-    padding: 60px 28px;
-  }
-
+  /* inbox */
   .inbox-container {
     padding: 60px 20px;
   }
 
   .inbox-img-left,
   .inbox-img-right {
-    opacity: 0.15;
+    opacity: 0.12;
   }
 
+  /* footer */
   .footer-top {
     flex-direction: column;
     gap: 30px;
@@ -954,56 +1042,71 @@ a {
   }
 }
 
+/* ─── Mobile (≤ 600px) ─────────────────── */
 @media (max-width: 600px) {
-  .nav-links {
-    display: none;
+
+  /* hero */
+  .hero-title {
+    font-size: 2rem;
   }
 
-  .navbar {
-    padding: 16px 20px;
+  .hero-inner {
+    padding: 30px 0 40px;
   }
 
-  .hero {
-    padding: 24px 20px 36px;
+  .food-img-wrapper {
+    width: 260px;
+    height: 260px;
   }
 
-  .categories-section {
-    padding: 24px 20px 10px;
+  .btn-view {
+    padding: 12px 20px;
+    font-size: 0.85rem;
   }
 
+  /* categories */
   .category-tabs {
-    gap: 10px;
+    gap: 8px;
   }
 
   .cat-tab {
-    padding: 12px 16px;
-    font-size: 0.8rem;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    border-radius: 12px;
   }
 
   .cat-icon {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
-  .recipes-section {
-    padding: 30px 20px 50px;
-  }
-
+  /* recipes */
   .recipes-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .delicious-section {
-    padding: 40px 20px;
+  .recipes-heading {
+    font-size: 1.6rem;
   }
 
+  /* chef */
+  .chef-title {
+    font-size: 1.8rem;
+  }
+
+  /* delicious */
   .delicious-grid {
     grid-template-columns: 1fr;
   }
 
-  .inbox-section {
-    padding: 40px 20px;
+  .delicious-title {
+    font-size: 1.8rem;
+  }
+
+  /* inbox */
+  .inbox-title {
+    font-size: 2rem;
   }
 
   .inbox-form {
@@ -1019,19 +1122,21 @@ a {
     border-radius: 50px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 14px 20px;
   }
 
   .btn-subscribe {
     width: 100%;
   }
 
-  .site-footer {
-    padding: 60px 20px 30px;
-  }
-
+  /* footer */
   .footer-nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+
+  .footer-logo {
+    font-size: 1.4rem;
   }
 }
